@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Event from './components/Event/Event'
 
 function App() {
   return (
     <div className="App">
-    <h1>This is hello react</h1>
+   <Event/>
     </div>
   );
 }
