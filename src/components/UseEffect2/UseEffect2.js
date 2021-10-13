@@ -6,12 +6,14 @@ const UseEffect2 = () => {
     const changeXy = e =>{
     const str = e.pageX + ',' + e.pageY;
     setShowXy(str)
+    console.log(str)
     }
 
     React.useEffect(() =>{
 window.addEventListener('mousemove', changeXy)
 return () =>{
-    console.log('clean up the data')
+    window.removeEventListener('mousemove', changeXy)
+    
 }
     })
 
@@ -22,5 +24,13 @@ return () =>{
         </div>
     );
 };
+// function UseEffect3() {
+//  const [showxy, setShowXy] = React.useState("0.0");
 
+//     return (
+//         <>
+// <h1>{showxy}</h1>
+//         </>
+//     )
+// }
 export default UseEffect2;
